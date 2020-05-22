@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Admin vehicle</title>
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-sm-3">
+      <h3>Add vehicle:</h3>
+      <form [formGroup]="adminForm"  autocomplete="on">
+        <div class="form-group">
+          <input type="hidden" formControlName="id" class="form-control" [(ngModel)]="userServ.selectVehicle.id" />
+        </div>
+        <div class="form-group">
+          <label>Plates</label>
+          <input type="text" formControlName="plates" class="form-control"
+            [(ngModel)]="userServ.selectVehicle.plates" 
+            [ngClass]="{ 'is-invalid': submitted && f.plates.errors }" />
+          <div *ngIf="submitted && f.plates.errors" class="invalid-feedback">
+            <div *ngIf="f.plates.errors.required">Plates is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Make</label>
+          <input type="text" formControlName="make" class="form-control"
+          [(ngModel)]="userServ.selectVehicle.make" 
+            [ngClass]="{ 'is-invalid': submitted && f.make.errors }" />
+          <div *ngIf="submitted && f.make.errors" class="invalid-feedback">
+            <div *ngIf="f.make.errors.required">Make is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Color</label>
+          <input type="text" formControlName="color" class="form-control"
+          [(ngModel)]="userServ.selectVehicle.color" 
+            [ngClass]="{ 'is-invalid': submitted && f.color.errors }" />
+          <div *ngIf="submitted && f.color.errors" class="invalid-feedback">
+            <div *ngIf="f.color.errors.required">Color is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Model</label>
+          <input type="text" formControlName="model" class="form-control"
+          [(ngModel)]="userServ.selectVehicle.model" 
+            [ngClass]="{ 'is-invalid': submitted && f.model.errors }" />
+          <div *ngIf="submitted && f.model.errors" class="invalid-feedback">
+            <div *ngIf="f.model.errors.required">Model is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="hidden" formControlName="userid" class="form-control" 
+          [(ngModel)]="userServ.selectVehicle.userid"/>
+        </div>
+        <div class="form-group">
+          <input type="hidden" formControlName="positiongps" class="form-control" 
+          [(ngModel)]="userServ.selectVehicle.positiongps"/>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm" style="text-align:start" >
+            <button [disabled]="loading" class="btn btn-primary"
+            (click)="onSubmit()">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Save</button>
+          </div>
+          <div class="container col-sm" style="text-align:end">
+            <button class="btn btn-secondary" (click)="onReset()">clear</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-9">
+      <h3>Vehicle data:</h3>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+           <!-- <th scope="col" type="hidden">ID</th> -->
+            <th scope="col">Plates</th>
+            <th scope="col">Make</th>
+            <th scope="col">Color</th>
+            <th scope="col">Model</th>
+            <!--<th scope="col" type="hidden">Userid</th>
+            <th scope="col" type="hidden">positiongps</th>-->
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let vh of Vehicles">
+           <!-- <td scope="row" type="hidden">{{ vh?.id }}</td> -->
+            <td scope="row">{{ vh?.plates }}</td>
+            <td scope="row">{{ vh?.make }}</td>
+            <td scope="row">{{ vh?.color }}</td>
+            <td scope="row">{{ vh?.model }}</td>
+            <!--<td scope="row">{{ vh?.userid }}</td>
+            <td scope="row">{{ vh?.positiongps }}</td> -->
+            <td scope="row">
+              <a (click)="editVehicle(vh)">
+                <i class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"
+                  data-original-title="Edit">Edit</i>
+              </a>
+              <!--<a (click)="deleteVehicle(vh)">
+                <i class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delte"
+                  data-original-title="Delete">Delete</i>
+              </a>-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

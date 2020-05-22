@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootswatch/dist/cyborg/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -120,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontend-angular-gps"
+    }
+  },
+  "defaultProject": "frontend-angular-gps",
+  "cli": {
+    "analytics": "a090f494-1911-40db-9bfc-c15420e6c0a1"
+  }
 }
