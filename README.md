@@ -1,9 +1,20 @@
-# FrontendAngularGps
+#FrontendAngularGps
 
-This project was generated with Angular CLI version 9.1.3, Node: 13.8.0
+Este proyecto fue creado con Angular 9.1.3, Node: 13.8.0
 
-## Development server
+Al momento de descargar este proyecto, instale las dependencia con npm install, para ejecutar npm run start, la apliacion corre en: http://localhost:4200/
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Para ver el manual de operación del Frontend.
+
+https://drive.google.com/open?id=1roP7ig2DBpnwYt4_E3Ix1JfDWAWmH1WK
+
+## Para ver el repositorio del BackEnd.
+
+https://github.com/gmayas/nodejs-restapi-postgres-ts.git
+
+## Imagen de la Base de datos.
+
+https://drive.google.com/open?id=1rKq-oKZyZ_N2jDpKbIUAl5Eo5G6SODwJ
 
 
