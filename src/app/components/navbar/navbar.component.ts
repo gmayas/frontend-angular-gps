@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit, OnDestroy, OnChanges {
   public alive: boolean = true;
   public user: any; 
   //   
-  constructor(private auth: AuthService,
+  constructor(public auth: AuthService,
     private router: Router) {
     this.auth.isAuthenticated()
       .pipe(takeWhile(() => this.alive))

@@ -28,7 +28,7 @@ export class AdminComponent implements OnInit, OnDestroy, OnChanges {
   public user: any;
   public Vehicles: any
   //
-  constructor(private auth: AuthService, private userServ: UsersService, private formBuilder: FormBuilder, private route: ActivatedRoute,
+  constructor(public auth: AuthService, public userServ: UsersService, private formBuilder: FormBuilder, private route: ActivatedRoute,
     private router: Router, private toastr: ToastrService) {
     this.user = this.auth.user();
     console.log('this.user.id: ', _.get(this.user.value, 'id'))

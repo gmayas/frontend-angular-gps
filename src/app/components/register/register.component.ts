@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
     loading = false;
     submitted = false;
 
-    constructor(private auth: AuthService, private formBuilder: FormBuilder, private route: ActivatedRoute,
+    constructor(public auth: AuthService, private formBuilder: FormBuilder, private route: ActivatedRoute,
         private router: Router, private toastr: ToastrService) { }
 
     ngOnInit() {
@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
+    get f(): any { return this.registerForm.controls; }
 
     onSubmit() {
         this.submitted = true;

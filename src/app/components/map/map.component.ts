@@ -29,7 +29,7 @@ export class MapComponent implements OnInit, OnDestroy, OnChanges {
   public user: any;
   public Vehicles: any
 
-  constructor(private auth: AuthService, private userServ: UsersService,
+  constructor(public auth: AuthService, public userServ: UsersService,
     private router: Router, private toastr: ToastrService, private google: GoogleMap) {
     this.user = this.auth.user();
     console.log('this.user.id: ', _.get(this.user.value, 'id'))

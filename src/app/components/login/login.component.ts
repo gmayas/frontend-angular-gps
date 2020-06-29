@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   loading = false;
   submitted = false;
 
-  constructor(private auth: AuthService, private formBuilder: FormBuilder, private route: ActivatedRoute,
+  constructor(public auth: AuthService, private formBuilder: FormBuilder, private route: ActivatedRoute,
     private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
