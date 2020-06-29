@@ -1,27 +1,20 @@
 # FrontendAngularGps
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+Este proyecto fue creado con Angular 9.1.3, Node: 13.8.0
 
-## Development server
+Al momento de descargar este proyecto, instale las dependencia con npm install, para ejecutar npm run start, la apliacion corre en: http://localhost:4200/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Para ver el manual de operación del Frontend.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://drive.google.com/open?id=1roP7ig2DBpnwYt4_E3Ix1JfDWAWmH1WK
 
-## Build
+## Para ver el repositorio del BackEnd.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+https://github.com/gmayas/nodejs-restapi-postgres-ts.git
 
-## Running unit tests
+## Imagen de la Base de datos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://drive.google.com/open?id=1rKq-oKZyZ_N2jDpKbIUAl5Eo5G6SODwJ
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
